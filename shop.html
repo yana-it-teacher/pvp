@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин курсів | Minecraft PvP Coaching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header shop-header">
+        <a href="index.html" class="back-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Назад</span>
+        </a>
+
+        <h1 class="shop-title">КУРСИ PVP ТРЕНУВАНЬ</h1>
+
+        <button class="cart-open" id="cart-open" type="button" aria-haspopup="dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+            <span>Кошик</span>
+            <span class="cart-count-badge" id="cart-count">0</span>
+        </button>
+    </header>
+
+    <main class="shop-container">
+        <div class="shop-hero">
+            <p class="shop-subtitle">Обирай свій напрямок тренувань, вивчай механіки та навчися перемагати у будь-яких
+                дуелях!</p>
+        </div>
+
+        <div class="cards"></div>
+    </main>
+
+    <dialog class="cart-modal" id="cart-modal" aria-labelledby="cart-title">
+        <div id="cart-content">
+            <div class="cart-heading">
+                <h2 id="cart-title">Ваш кошик</h2>
+                <button class="cart-close" id="cart-close" type="button" aria-label="Закрити кошик">Закрити</button>
+            </div>
+
+            <div class="cart-items" id="cart-items"></div>
+
+            <div class="cart-footer">
+                <button class="cart-clear" id="cart-clear" type="button">Очистити</button>
+                <div class="cart-total-wrap">
+                    Разом: <strong id="cart-total">0</strong>$
+                </div>
+            </div>
+
+            <div class="cart-form-group">
+                <label class="cart-discord-label" for="cart-discord">Введіть свій Discord (для зв'язку з
+                    тренером)</label>
+                <input class="cart-discord-input" id="cart-discord" name="discord" type="text"
+                    placeholder="наприклад: player#1337 або username" autocomplete="username">
+                <p class="cart-order-error" id="cart-order-error" role="alert" hidden>Будь ласка, вкажіть ваш Discord
+                    для оформлення</p>
+            </div>
+
+            <button class="cart-order" id="cart-order" type="button">Оформити замовлення</button>
+        </div>
+
+        <div id="cart-confirmation" hidden>
+            <div class="cart-confirmation-icon">✓</div>
+            <h2 id="cart-confirmation-title" class="cart-success">Ваше замовлення оформлене!</h2>
+            <p class="cart-confirmation-desc">Чекайте відповіді в Discord. Тренер зв'яжеться з вами найближчим часом для
+                узгодження часу першого тренування.</p>
+            <button class="cart-close-confirm" id="cart-confirmation-close" type="button">Зрозуміло</button>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

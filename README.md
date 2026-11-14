@@ -1,1 +1,1 @@
-# pvp
+# minecraft-pvp-coaching
